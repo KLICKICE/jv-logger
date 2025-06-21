@@ -1,0 +1,9 @@
+mate\academy\service\OrderServiceImpl.class
+mate\academy\exception\AuthenticationException.class
+mate\academy\model\Order.class
+mate\academy\model\User.class
+mate\academy\service\AuthenticationService.class
+mate\academy\model\Product.class
+mate\academy\service\OrderService.class
+mate\academy\Main.class
+mate\academy\service\AuthenticationServiceImpl.class
