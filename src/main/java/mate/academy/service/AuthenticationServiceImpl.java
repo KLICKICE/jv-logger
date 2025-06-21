@@ -11,8 +11,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public User login(String login, String password) throws AuthenticationException {
         //TODO: add corresponding log message about method login was called
-        logger.info("Login method was called with login: {}",
-                login);
+        logger.info("Login method was called with login: "
+                + "'{}' and password: '{}'", login, password);
         User user = findByLogin(login);
         if (!user.getPassword().equals(password)) {
             throw new AuthenticationException("Username or password are incorrect");

@@ -14,14 +14,16 @@ public class Main {
 
     public static void main(String[] args) {
         AuthenticationService authenticationService = new AuthenticationServiceImpl();
+        String login = "bob";
+        String password = "1234";
         User user;
         try {
-            user = authenticationService.login("bob", "1234");
+            user = authenticationService.login(login, password);
         } catch (AuthenticationException e) {
-            logger.error("AuthenticationException was caught in Main method: {}",
-                    e.getMessage(), e);
+            logger.error("Authentication failed for login '{}': {}", login, e.getMessage(), e);
             return;
         }
+
         OrderService orderService = new OrderServiceImpl();
         orderService.completeOrder(user.getUserId());
     }
